@@ -70,13 +70,13 @@ function MemoryCard() {
         handleOnClickModal={handleOnClickModal}
       />
       <div className="flex justify-center sm:items-center w-screen md:pt-24 sm:mt-0 ">
-        <div className="flex  flex-wrap justify-center mt-28 sm:mt-0">
+        <div className="flex  flex-wrap justify-center mt-28 sm:mt-0 md:m-40 ">
           {ModelArray.map((item) => {
             return (
               <div
                 key={Math.random(1, 100)}
                 /*   className="border border-slate-700" */
-                className=" min-h-36 min-w-36 max-h-80 max-w-80 md:min-h-80 md:min-w-80 "
+                className=" min-h-36 min-w-36 max-h-80 max-w-80 md:min-h-52 md:min-w-52 lg:min-h-60 lg:min-w-60 "
               >
                 <Canvas camera={{ fov: 50, position: [0, 0, 350] }}>
                   <Suspense fallback={<Loader />}>
