@@ -232,7 +232,7 @@ function App() {
   function onClickStartIntro() {
     setShowInsertCd(false);
     startTimer();
-    setIsLoading(false);
+    setIsLoading(true);
   }
 
   if (showInsertCd) {
