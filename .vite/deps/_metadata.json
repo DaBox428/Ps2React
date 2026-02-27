@@ -1,0 +1,121 @@
+{
+  "hash": "c7cf11d3",
+  "configHash": "29f01591",
+  "lockfileHash": "06138ed7",
+  "browserHash": "bdb17475",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "94dc4bb2",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6a58ff4c",
+      "needsInterop": true
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "014a5df3",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "ba60a0a3",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "f90369e7",
+      "needsInterop": false
+    },
+    "@react-three/postprocessing": {
+      "src": "../../node_modules/@react-three/postprocessing/dist/index.js",
+      "file": "@react-three_postprocessing.js",
+      "fileHash": "2c95672c",
+      "needsInterop": false
+    },
+    "postprocessing": {
+      "src": "../../node_modules/postprocessing/build/index.js",
+      "file": "postprocessing.js",
+      "fileHash": "49feb8b1",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "f722efac",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/index.mjs",
+      "file": "@fortawesome_free-solid-svg-icons.js",
+      "fileHash": "52992ce8",
+      "needsInterop": false
+    },
+    "leva": {
+      "src": "../../node_modules/leva/dist/leva.esm.js",
+      "file": "leva.js",
+      "fileHash": "a11c45be",
+      "needsInterop": false
+    },
+    "three/src/loaders/TextureLoader": {
+      "src": "../../node_modules/three/src/loaders/TextureLoader.js",
+      "file": "three_src_loaders_TextureLoader.js",
+      "fileHash": "5ba331f2",
+      "needsInterop": false
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "0886a0b1",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "troika-three-text.esm-LFC2P76V": {
+      "file": "troika-three-text__esm-LFC2P76V.js"
+    },
+    "vision_bundle-V3PWMATS": {
+      "file": "vision_bundle-V3PWMATS.js"
+    },
+    "chunk-AN3EYDBW": {
+      "file": "chunk-AN3EYDBW.js"
+    },
+    "chunk-7T4CTAIN": {
+      "file": "chunk-7T4CTAIN.js"
+    },
+    "chunk-PXJLUKTU": {
+      "file": "chunk-PXJLUKTU.js"
+    },
+    "chunk-XPETO7IG": {
+      "file": "chunk-XPETO7IG.js"
+    },
+    "chunk-H7CAPTME": {
+      "file": "chunk-H7CAPTME.js"
+    },
+    "chunk-CVAAIOKW": {
+      "file": "chunk-CVAAIOKW.js"
+    },
+    "chunk-JGBNAEOM": {
+      "file": "chunk-JGBNAEOM.js"
+    },
+    "chunk-KPGO5WWE": {
+      "file": "chunk-KPGO5WWE.js"
+    },
+    "chunk-2SA2TB4A": {
+      "file": "chunk-2SA2TB4A.js"
+    },
+    "chunk-FQO5W7GE": {
+      "file": "chunk-FQO5W7GE.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}

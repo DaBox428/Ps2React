@@ -27,10 +27,10 @@ const ModalDialog = forwardRef((props, ref) => {
       className="backdrop:bg-blue-950/95 bg-slate-500/0 h-screen w-screen overflow-x-hidden open:animate-modalf flex items-center justify-center"
     >
       {modelUrl && (
-        <div className="flex flex-col sm:flex-row w-screen mx-auto items-center justify-center ">
+        <div className="flex flex-col sm:flex-row w-screen mx-auto items-center justify-center mb-7">
           <div className="flex flex-row justify-center w-screen">
-              <div className="border border-slate-700 rounded-lg bg-slate-700/50 backdrop-blur-sm ">
-              <Canvas className="w-full h-full" camera={{ fov: 70, position: [0, 0, 300] }}>
+              <div className="border border-slate-700 rounded-lg bg-slate-700/50 backdrop-blur-sm">
+              <Canvas className="w-full h-full cursor-grab" camera={{ fov: 70, position: [0, 0, 300] }}>
                 <Suspense fallback={<Loader />}>
                   <OrbitControls enableZoom={false} enablePan={false} />
                   <ambientLight intensity={1} />
@@ -51,16 +51,16 @@ const ModalDialog = forwardRef((props, ref) => {
             <div className="flex flex-wrap border border-slate-700 rounded-lg mt-10 sm:mt-0 bg-slate-700/50 max-w-5xl ">
               <div className="flex-col">
                 <div className="grid grid-flow-row grid-cols-2 justify-center border border-slate-700">
-                  <div className={`border border-slate-700 ${selectedTab === "About" ? "bg-slate-600/50" : ""}`} onClick={() => handleSelectedTab("About")}>
+                  <Button className={`cursor-pointer border border-slate-700  ${selectedTab === "About" ? "bg-slate-600/50" : ""}`} onClick={() => handleSelectedTab("About")}>
                     <h2
                       className="text-yellow-400 lg:text-4xl text-3xl font-extrabold font-sans text-wrap
                     font-outline-2 tracking-[.11em] text-center sm:m-auto m-6 p-6 "
                     >
                         About
                     </h2>
-                  </div>
+                  </Button>
                   
-                  <div className={`border border-slate-700 ${selectedTab === "AboutThisPage" ? "bg-slate-600/50" : ""}`} onClick={() => handleSelectedTab("AboutThisPage")}>
+                  <div className={`border border-slate-700 ${selectedTab === "AboutThisPage" ? "bg-slate-600/50" : ""} cursor-pointer`} onClick={() => handleSelectedTab("AboutThisPage")}>
                     <h2
                     className="text-yellow-400 lg:text-4xl text-3xl font-extrabold font-sans text-wrap
                   font-outline-2 tracking-[.11em] text-center sm:m-auto m-6 p-6"
@@ -74,7 +74,7 @@ const ModalDialog = forwardRef((props, ref) => {
                 
                 
 
-                <p className="text-white 2xl:text-3xl xl:text-xl font-bold font-sans font-outline-1 tracking-[.11em] text-center pt-3 mx-12 2xl:mx-0 p-6">
+                <p className="text-white 2xl:text-3xl xl:text-xl font-bold font-sans font-outline-1 tracking-[.11em] text-center pt-3 mx-12 2xl:mx-0 p-6 overflow-y-auto max-h-[550px]">
                   {selectedTab === "About" ? selectedModel.description : "This page was made by Michel Aycaguer as a personal project to learn React and 3D modeling. The models were made by Michel Aycaguer and are not for commercial use. The textures were made by Michel Aycaguer and are not for commercial use. The code was made by Michel Aycaguer and is not for commercial use."  }
 
                   <br />
@@ -92,10 +92,10 @@ const ModalDialog = forwardRef((props, ref) => {
 
       {modelUrl && (
         <form method="dialog" className="mb-0">
-          <div className="flex flex-row p-3 absolute left-1/2 transform -translate-x-1/2 bottom-5 rounded-lg bg-slate-700/50 backdrop-blur-sm items-center">
+          <div className="cursor-pointer flex flex-row p-3 absolute left-1/2 transform -translate-x-1/2 bottom-5 rounded-lg bg-slate-700/50 backdrop-blur-sm items-center" onClick={() => { props.handleOnClickModal(false); setSelectedTab("About"); }}>
             <img src={circleImage} className="sm:max-w-14 max-w-8" />
-            <div className=" text-white text-2xl font-bold font-sans font-outline-2 tracking-[.11em] text-center">
-              <button type="button" className="px-3" onClick={() => { props.handleOnClickModal(false); setSelectedTab("About"); }}>Back</button>
+              <div className=" text-white text-2xl font-bold font-sans font-outline-2 tracking-[.11em] text-center cursor-pointer">
+                <button type="button" className="px-3 cursor-pointer" >Back</button>
             </div>
           </div>
         </form>

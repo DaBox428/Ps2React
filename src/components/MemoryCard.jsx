@@ -93,10 +93,10 @@ function MemoryCard() {
                    className="" 
                 
               >
-                <Canvas camera={{ fov: 50, position: [0, 0, 700] }} className="min-w-full min-h-36">
+                <Canvas camera={{ fov: 50, position: [0, 0, 700] }} className="min-w-full min-h-36 cursor-pointer" onClick={() => handleOnClickModal(item.url)}>
                   <Suspense fallback={<Loader />}>
                     <ambientLight intensity={1.5} />
-                    <Environment preset="warehouse" />
+                    <Environment preset="lobby" />
 
                     <ThreeDModel
                       modelUrl={item.url}
