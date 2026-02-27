@@ -17,6 +17,7 @@ function ThreeDModel({
   const colorMap = useLoader(TextureLoader, meshTexture);
   let obj = useFBX(modelUrl);
   const model = useRef();
+  const light = useRef();
 
   if (props.repeat) {
     useFrame(({ clock }) => {
@@ -25,37 +26,50 @@ function ThreeDModel({
 
     obj = obj.clone();
   } else {
+    useFrame(({ clock }) => {
+      light.current.scale.set(
+        1 + Math.sin(clock.getElapsedTime() * 3) * 0.1,
+        1 + Math.sin(clock.getElapsedTime() * 3) * 0.1,
+        1 + Math.sin(clock.getElapsedTime() * 3) * 0.1
+      );
+    });
+
   }
 
   const [isHovered, setIsHovered] = useState(false);
+ 
 
   function handleSetIsHoeverd(active) {
     setIsHovered(active);
     document.body.style.cursor = isHovered == true ? "auto" : "pointer";
   }
 
+
+
+
+
   return (
     <>
-      {isHovered && !props.repeat && (
-        <mesh position={[0, 0, 70]}>
+      {!props.repeat && (
+        <mesh position={[0, 5, 57]} ref={light}>
           <sphereGeometry args={[30]} />
           <meshStandardMaterial
             color={0xffffff}
             toneMapped={false}
-            opacity={1}
+            opacity={2}
           />
           <FakeGlowMaterial
-            falloff={0.2}
-            glowSharpness={0.8}
+            falloff={1}
+            glowSharpness={2}
             glowColor="#588ed5"
             opacity={1}
-            glowInternalRadius={4}
+            glowInternalRadius={1.5}
           ></FakeGlowMaterial>
 
-          <directionalLight intensity={1} color={0x7cb2e8} />
+          <directionalLight intensity={1.5} color={0x7cb2e8} />
         </mesh>
       )}
-
+      
       <mesh ref={model}>
         <primitive
           onClick={() => handleOnClickModal(modelUrl)}

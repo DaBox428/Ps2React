@@ -25,7 +25,7 @@ function PreLoader({ onClick }) {
     <div
       ref={divRef}
       className={`bg-black h-screen w-screen overflow-hidden 
-        transition-all duration-[2000ms]    ${
+        transition-all duration-[1500ms]    ${
           fadeOut ? "opacity-0" : "opacity-100"
         }`}
     >
@@ -44,7 +44,7 @@ function PreLoader({ onClick }) {
           className=""
           
         />
-        <p className="m-8 text-sky-800 text-2xl font-extrabold font-sans flex flex-col animate-pulse tracking-[.15em]">
+        <p className="m-8 text-white text-2xl font-extrabold font-sans flex flex-col animate-pulse tracking-[.20em]">
           Please Insert Disk. . .
         </p>
       </div>
